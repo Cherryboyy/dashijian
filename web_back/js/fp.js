@@ -1,6 +1,7 @@
 var urll = 'http://localhost:8000/'
 var user ={
     //登录方法
+    //callbck就是回调的意思，设置一个回调函数
     login: function (username, pasword,callback) {
         $.post(
             urll +'admin/login',
@@ -10,7 +11,6 @@ var user ={
                 // password: pasword
             },
             function (res) {
-                console.log(res)
                 callback(res)
                 // alert(res.msg);
             }
