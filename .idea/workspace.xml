@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73a42f4-620c-48d7-aa2d-b3961a5bd6ce" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/web_back/js/category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_back/article_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/article_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_back/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_back/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_back/js/fp.js" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/js/fp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,11 +63,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575249433565</updated>
-      <workItem from="1575249434706" duration="14437000" />
+      <workItem from="1575249434706" duration="20403000" />
     </task>
+    <task id="LOCAL-00001" summary="添加了一个js地址文件">
+      <created>1575270458709</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575270458709</updated>
+    </task>
+    <task id="LOCAL-00002" summary="封装了一个js,把登录页面抽离到js文件中">
+      <created>1575270955147</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575270955147</updated>
+    </task>
+    <task id="LOCAL-00003" summary="设置回调函数，封装完成">
+      <created>1575273314413</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575273314413</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加了一个js地址文件" />
+    <MESSAGE value="封装了一个js,把登录页面抽离到js文件中" />
+    <MESSAGE value="设置回调函数，封装完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置回调函数，封装完成" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1083" y="122" key="CommitChangelistDialog2" timestamp="1575276471483">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1083" y="122" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1575276471483" />
   </component>
 </project>
