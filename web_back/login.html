@@ -52,29 +52,7 @@
 </div>
 <script src="./js/jquery-1.12.4.min.js"></script>
 <script src="js/bootstrap/js/bootstrap.min.js"></script>
-<script>
-    var user = {
-        login: function (username, pasword) {
-            $.post(
-                'http://localhost:8000/admin/login',
-                {
-                    user_name: username,
-                    password: pasword,
-                    // password: pasword
-                },
-                function (res) {
-                    console.log(res)
-                    // alert(res.msg);
-                    if (res.code === 200) {
-                        location.href = 'index.html'
-                    }
-                }
-            )
-        }
-    }
-
-
-</script>
+<script src="js/fp.js"></script>
 <script>
     //点击登录，获取用户名与密码
     //调用接口验证用户名与密码是否正确

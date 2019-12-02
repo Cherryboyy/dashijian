@@ -111,32 +111,7 @@
 </script>
 
 
-<script>
-    var user = {
-        logout: function () {
-            $.post(
-                'http://localhost:8000/admin/logout',
-                function (res) {
-                    if (res.code == 200) {
-                        location.href = 'login.html'
-                    }
-                }
-            )
-        },
-        getInfo: function () {
-            $.get('http://localhost:8000/admin/getuser',
-                function (res) {
-                    if (res.code === 200) {
-                        //更改头像
-                        $('.toux').prop('src', res.data.user_pic);//prop修改元素的故有属性
-                        //更改管理员名字
-                        $('#nme').text(res.data.nickname).css('font-style', 'normal')
-                    }
-                }
-            )
-        },
-    }
-</script>
+<script src="js/fp.js"></script>
 
 <script>
     //退出实现
