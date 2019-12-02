@@ -23,13 +23,44 @@
             <form class="login_form">
                 <i class="iconfont icon-user"></i>
                 <i class="iconfont icon-key"></i>
-                <input type="text" class="input_txt" placeholder="邮箱/手机号">
+                <input type="text" class="input_txt" placeholder="用户名">
                 <input type="password" class="input_pass" placeholder="密码">
-                <input type="submit" class="input_sub" value="登 录">
+                <input id="btn" type="button" class="input_sub" value="登 录">
             </form>
         </div>
 
-    </div> 
+    </div>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        //点击登录，获取用户名与密码
+        //调用接口验证用户名与密码是否正确
+        $('#btn').click(function() {
+            var username = $('.input_txt').val().trim();//trim去除空格
+            var pasword = $('.input_pass').val().trim();
+            //判断不能为空
+            if(username ==='' ||pasword ==='') {
+                alert('不能为空')
+                return;
+            }
+            //调用接口
+            $.post(
+                'http://localhost:8000/admin/login',
+                {
+                    user_name: username,
+                    password: pasword,
+                    // password: pasword
+                },
+                function (res) {
+                console.log(res)
+                    alert(res.msg);
+                    if(res.code ===200) {
+                        location.href = 'index.html'
+                    }
+                }
+            )
+        })
+    </script>
 
 </body>
 
