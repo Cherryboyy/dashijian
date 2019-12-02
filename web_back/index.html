@@ -116,7 +116,11 @@
 <script>
     //退出实现
     $('#Login').click(function () {
-        user.logout();
+        user.logout(function (res) {
+            if (res.code == 200) {
+                location.href = 'login.html'
+            }
+        });
         // $.post(
         //     'http://localhost:8000/admin/logout',
         //     function (res) {
@@ -128,7 +132,14 @@
     })
 
     //发送ajax请求，调用接口，获取用户信息
-    user.getInfo()
+    user.getInfo(function(res) {
+        if (res.code === 200) {
+            //更改头像
+            $('.toux').prop('src', res.data.user_pic);//prop修改元素的故有属性
+            //更改管理员名字
+            $('#nme').text(res.data.nickname).css('font-style', 'normal')
+        }
+    })
     // $.get('http://localhost:8000/admin/getuser',
     //     function(res) {
     //     if(res.code ===200) {

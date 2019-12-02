@@ -82,7 +82,14 @@
         //         }
         //     }
         // )
-        user.login(username, pasword)
+        user.login(username, pasword, function (res) {
+            $('#myMsg').text(res.msg)
+            $('#myModal').modal('show')
+            if (res.code === 200) {
+                location.href = 'index.html'
+            }
+        });
+
     })
 </script>
 

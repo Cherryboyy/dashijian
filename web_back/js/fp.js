@@ -1,7 +1,7 @@
 var urll = 'http://localhost:8000/'
 var user ={
     //登录方法
-    login: function (username, pasword) {
+    login: function (username, pasword,callback) {
         $.post(
             urll +'admin/login',
             {
@@ -11,35 +11,26 @@ var user ={
             },
             function (res) {
                 console.log(res)
+                callback(res)
                 // alert(res.msg);
-                if (res.code === 200) {
-                    location.href = 'index.html'
-                }
             }
         )
     },
     //退出方法
-    logout: function () {
+    logout: function (callback) {
         $.post(
             urll +'admin/logout',
             function (res) {
-                if (res.code == 200) {
-                    location.href = 'login.html'
-                }
+            callback(res)
             }
         )
     },
     //获取用户信息
-    getInfo: function () {
+    getInfo: function (callback) {
         $.get(
             urll +'admin/getuser',
             function (res) {
-                if (res.code === 200) {
-                    //更改头像
-                    $('.toux').prop('src', res.data.user_pic);//prop修改元素的故有属性
-                    //更改管理员名字
-                    $('#nme').text(res.data.nickname).css('font-style', 'normal')
-                }
+                callback(res)
             }
         )
     },
