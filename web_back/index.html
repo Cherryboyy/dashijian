@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <div class="header_bar">        
+    <div class="header_bar">
         <form class="search_form">
             <input type="text" placeholder="请输入搜索内容">
             <i class="iconfont icon-search"></i>
@@ -44,7 +44,7 @@
         <div class="user_center_link">
             <a href="user.html" onclick="setMenu(3,0)" target="main_frame">个人中心</a>
             <img src="images/2.jpg" alt="person">
-            <a href="#"><i class="iconfont icon-tuichu"></i> 退出</a>
+            <a id="Login" href="javascript:;"><i class="iconfont icon-tuichu"></i> 退出</a>
         </div>
     </div>
 
@@ -65,7 +65,7 @@
                 $(this).next().slideToggle();
                 $(this).find('b').toggleClass('rotate0');
             }else{
-                $subli.removeClass('active'); 
+                $subli.removeClass('active');
             }
         })
 
@@ -94,8 +94,8 @@
 
         function setMenu(m,n){
            $level01.eq(m).addClass('active').siblings().not('.level02').removeClass('active');
-           if(m!=1){              
-              $('.level02').slideUp(); 
+           if(m!=1){
+              $('.level02').slideUp();
            }else{
               $('.level02').slideDown();
               $('.level02').children().eq(n).addClass('active').siblings().removeClass('active');
@@ -104,5 +104,17 @@
 
     </script>
 
+    <script>
+        $('#Login').click(function() {
+            $.post(
+                'http://localhost:8000/admin/logout',
+                function (res) {
+                    if(res.code ==200) {
+                        location.href = 'login.html'
+                    }
+                }
+            )
+        })
+    </script>
 </body>
 </html>
