@@ -151,6 +151,8 @@
 </script>
 <script src="./js/category.js"></script>
 <script src="./js/template-web.js"></script>
+
+<!--模板引擎的使用-->
 <script type="text/html" id="moban">
     {{each arr v}}
     <tr>
@@ -158,7 +160,7 @@
     <td>{{v.slug}}</td>
     <td class="text-center">
         <a href="javascript:;"class="btn btn-info btn-xs">编辑{{v.id}}</a>
-        <a href="javascript:;" id="{{v.id}}" class="btn btn-danger btn-xs" >删除</a>
+        <a href="javascript:;" id="{{v.id}}" class="btn btn-danger btn-xs" >删除{{v.id}}</a>
     </td>
     </tr>
     {{/each}}
@@ -203,20 +205,28 @@
 
     //删除
     $('tbody').on('click', '.btn-danger', function () {
+        // var zz = $(this).prop('id')
+        // zz = Number(zz)
+        // console.log(zz)
+        // var pp = $(this)
+        // $.post(
+        //     'http://localhost:8000/admin/category_delete',
+        //     {
+        //         id: zz
+        //     },
+        //     function (res) {
+        //         console.log(res)
+        //         pp.parents('tr').remove()
+        //     }
+        // )
+        if(!confirm('你确定要删除吗？')) return;
         var zz = $(this).prop('id')
-        zz = Number(zz)
-        console.log(zz)
+        // zz = Number(zz)
+        // console.log(zz)
         var pp = $(this)
-        $.post(
-            'http://localhost:8000/admin/category_delete',
-            {
-                id: zz
-            },
-            function (res) {
-                console.log(res)
-                pp.parents('tr').remove()
-            }
-        )
+        category.delete(zz,function(res) {
+            pp.parents('tr').remove()
+        })
     })
 </script>
 </body>

@@ -24,7 +24,18 @@ var category = {
                 callback(res)
             }
         )
-    }
+    },
 //删除分类
+    delete:function(zz,callback) {
+
+        $.post(
+            'http://localhost:8000/admin/category_delete',
+            {
+                id: zz
+            },
+            function (res) {
+                callback(res)
+            })
+    }
 //编辑分类
 };
