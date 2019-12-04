@@ -150,6 +150,19 @@
     // })
 </script>
 <script src="./js/category.js"></script>
+<script src="./js/template-web.js"></script>
+<script type="text/html" id="moban">
+    {{each arr v}}
+    <tr>
+    <td>{{v.name}}</td>
+    <td>{{v.slug}}</td>
+    <td class="text-center">
+        <a href="javascript:;"class="btn btn-info btn-xs">编辑{{v.id}}</a>
+        <a href="javascript:;" id="{{v.id}}" class="btn btn-danger btn-xs" >删除</a>
+    </td>
+    </tr>
+    {{/each}}
+</script>
 <script>
     function loadData() {
         //获取类别
@@ -162,19 +175,23 @@
         //         var str = '';
         //         //遍历数据
         category.get(function(res) {
-            str = "";
-            res.data.forEach(function (i) {
-                str += `
-                <tr>
-                    <td>${i.name}</td>
-                    <td>${i.slug}</td>
-                    <td class="text-center">
-                        <a href="javascript:;"class="btn btn-info btn-xs">编辑${i.id}</a>
-                        <a href="javascript:;" id="${i.id}" class="btn btn-danger btn-xs" >删除</a>
-                    </td>
-                </tr>`
-            })
+            var str = template('moban',{
+                arr: res.data
+            });
+            // str = "";
+            // res.data.forEach(function (i) {
+                // str += `
+                // <tr>
+                //     <td>${i.name}</td>
+                //     <td>${i.slug}</td>
+                //     <td class="text-center">
+                //         <a href="javascript:;"class="btn btn-info btn-xs">编辑${i.id}</a>
+                //         <a href="javascript:;" id="${i.id}" class="btn btn-danger btn-xs" >删除</a>
+                //     </td>
+                // </tr>`
+            // })
             //拼接好的结果放入
+
             $('tbody').html(str);
         })
 

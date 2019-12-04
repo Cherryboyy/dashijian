@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73a42f4-620c-48d7-aa2d-b3961a5bd6ce" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/web_back/js/category.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_back/article_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/article_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_back/js/fp.js" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/js/fp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
