@@ -27,24 +27,24 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">文章标题：</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="文章标题">
+                        <input type="email" name="title" class="form-control" id="inputEmail3" placeholder="文章标题">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">文章封面：</label>
                     <div class="col-sm-10">
-                        <input type="file" id="exampleInputFile">
+                        <input name="cover" type="file" id="exampleInputFile">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">文章类别：</label>
                     <div class="col-sm-4">
-                        <select class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select class="form-control" name="type">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class="col-sm-4">
 
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="dateinput">
+                            <input name="date" type="text" class="form-control" placeholder="YYYY-MM-DD" id="dateinput">
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button"
                                     onclick="jeDate('#dateinput',{trigger:false,format: 'YYYY-MM-DD'})"><i
@@ -79,6 +79,38 @@
             </form>
         </div>
     </div>
+
+    <script src="js/article.js"></script>
+    <script src ="./js/category.js"></script>
+    <script src ="./js/template-web.js"></script>
+<!--    <script src="./js/tinymce/js/tinymce_setup.js"></script>-->
+    <script type="text/html" id="category">
+        {{each arr v}}
+        <option value="{{v.id}}">{{v.name}}</option>
+    {{/each}}
+    </script>
+    <script>
+        category.get(function(res) {
+            console.log(res)
+            var str =template('category', {
+                arr:res.data
+            })
+            $("select").html(str)
+        })
+    </script>
+    <script>
+        //发布按钮注册单击事件
+        $(".btn-success").click(function() {
+            var fd =new FormData(document.querySelector('form'));
+            fd.append('state','已发布');
+            fd.set('content',tinyMCE.activeEditor.getContent())
+
+            article.add(fd,function(res) {
+                console.log(res)
+            })
+        })
+
+    </script>
 
 </body>
 
