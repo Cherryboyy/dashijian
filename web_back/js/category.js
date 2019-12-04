@@ -29,13 +29,25 @@ var category = {
     delete:function(zz,callback) {
 
         $.post(
-            'http://localhost:8000/admin/category_delete',
+            urll+'admin/category_delete',
             {
                 id: zz
             },
             function (res) {
                 callback(res)
             })
-    }
+    },
 //编辑分类
+    edit: function(id,name,slug,callback) {
+        $.post(urll+'admin/category_edit',
+            {
+                id,
+                name,
+                slug
+            },
+            function (res) {
+            callback(res)
+            }
+            )
+    }
 };

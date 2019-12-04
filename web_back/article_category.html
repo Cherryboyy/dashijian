@@ -98,9 +98,35 @@
         </div>
     </div>
 </div>
-
+<!--编辑的模态框-->
+<div class="modal fade" id="editModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title">修改分类</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">分类名称:</label>
+                        <input type="text" class="form-control" id="edit-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">分类别名:</label>
+                        <input type="text" class="form-control" id="edit-slug">
+                        <input type="hidden" id="edit-id">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="edit_shutoff">关闭</button>
+                <button type="button" class="btn btn-primary" id="edit_add">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
-    var fp = 'http://localhost:8000/';
     $('#addModal').modal({
         show: false,
         backdrop: false
@@ -152,19 +178,21 @@
 <script src="./js/category.js"></script>
 <script src="./js/template-web.js"></script>
 
-<!--模板引擎的使用-->
+<!--模板引擎的使用,渲染添加的数据-->
 <script type="text/html" id="moban">
     {{each arr v}}
     <tr>
     <td>{{v.name}}</td>
     <td>{{v.slug}}</td>
     <td class="text-center">
-        <a href="javascript:;"class="btn btn-info btn-xs">编辑{{v.id}}</a>
+        <a href="javascript:;"class="btn btn-info btn-xs" data-id="{{v.id}}" data-name="{{v.name}}" data-sulg ="{{v.slug}}">编辑{{v.id}}</a>
         <a href="javascript:;" id="{{v.id}}" class="btn btn-danger btn-xs" >删除{{v.id}}</a>
     </td>
     </tr>
     {{/each}}
 </script>
+<!--模板引擎的使用,渲染编辑的数据-->
+<script type="text/html" id=""></script>
 <script>
     function loadData() {
         //获取类别
@@ -202,7 +230,9 @@
     }
 
     loadData()
-
+</script>
+<!--删除功能-->
+<script>
     //删除
     $('tbody').on('click', '.btn-danger', function () {
         // var zz = $(this).prop('id')
@@ -228,6 +258,42 @@
             pp.parents('tr').remove()
         })
     })
+
+    //编辑分类
+    $('#edit_shutoff').click(function () {
+        // alert('shutoff');
+        //点击关闭按钮
+        $('#editModal').modal('hide');//编辑的模态框隐藏
+    });
+    //点击保存按钮
+    $('#edit_add').click(function() {
+        var id = $('#edit-id').val(),name =$('#edit-name').val(),slug = $('#edit-slug').val()
+        category.edit(id,name,slug,function(res) {
+            console.log(res)
+            loadData();
+        })
+        $('#editModal').modal('hide');//编辑的模态框隐藏
+    })
+    $('body').on('click','.btn-info',function() {
+        //弹出模态框
+        // $('#editModal').modal({
+        //     show: true,
+        //     backdrop: true
+        // });
+        //获取当前标签的属性值
+        // var id = $('this').attr('id');
+        // var name =$('this').attr('data-name')
+        // var slug =$('this').attr('data-slug')
+        // console.log(this.dataset)
+        var data = this.dataset;
+        // console.log(data)
+        $("#edit-id").val(data.id)
+        $("#edit-name").val(data.name);
+        $("#edit-slug").val(data.sulg);
+
+        $('#editModal').modal('show')
+    });
+
 </script>
 </body>
 
