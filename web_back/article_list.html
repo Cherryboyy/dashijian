@@ -254,18 +254,6 @@
             <div class="row text-center">
                 <div id="pagination"></div>
             </div>
-            <script>
-                $(function() {
-                    $("#pagination").pagination({
-                        currentPage: 1,
-                        totalPage:8,
-                        callback: function(current) {
-                            // alert('ok!');
-                        }
-                    });
-                });
-            </script>
-
         </div>
     </div>
 
@@ -298,15 +286,35 @@
 <!--    获取数据-->
     <script>
         var data ={
-
+            page:1
         };
-        article.get(data,function (res) {
-            console.log(res)
-            var str = template('article',{
-                xyz:res.data
+        function loadData() {
+            article.get(data,function (res) {
+                console.log(res)
+                var str = template('article',{
+                    xyz:res.data
+                })
+                $("tbody").html(str)
+                showPage(res.page,res.totalPage);//渲染完成显示
             })
-            $("tbody").html(str)
-        })
+        }
+        loadData()
+    </script>
+    <script>
+        function showPage(c,t) {
+            $("#pagination").pagination({
+                currentPage: c,//当前页码
+                totalPage:t,//总页码
+                count:10,//显示多少页
+                //点击页面执行的函数
+                callback: function(current) {
+                    // alert('ok!');
+                    data.page = current
+                    loadData()
+                }
+            });
+        }
+
     </script>
 </body>
 
