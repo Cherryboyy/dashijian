@@ -19,5 +19,14 @@ var article ={
             processData:false,
             contentType:false
         })
+    },
+
+    //删除文章
+    delete: function (id,callback) {
+        $.get(urll +'admin/article_delete',{id:id},function(res) {
+            console.log(id)
+                console.log(res)
+            callback(res);
+        })
     }
 }
