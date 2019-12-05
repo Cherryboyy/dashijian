@@ -5,6 +5,7 @@ var apis = {
     category_show: urll +'/category',
     //文章相关接口
     article_hotpic : urll +'/hotpic',
-    article_latest:urll +'/latest'
+    article_latest:urll +'/latest',
+    article_article:urll +'/article'
     //评论接口
 }

@@ -242,7 +242,7 @@
         {{else}}
     <li>
         {{/if}}
-        <a href="#"><img src="{{v.cover}}" alt=""></a>
+        <a href="article.html?id={{v.id}}"><img src="{{v.cover}}" alt=""></a>
         <p>{{v.title}}</p>
     </li>
     {{/each}}
@@ -252,8 +252,8 @@
 <script type="text/html" id="zix">
     {{each zix v}}
     <div class="common_news_list">
-        <a href="#" class="list_pic"><img src="{{v.cover}}" alt=""></a>
-        <h4><a href="#">{{v.title}}</a></h4>
+        <a href="article.html?id={{v.id}}" class="list_pic"><img src="{{v.cover}}" alt=""></a>
+        <h4><a href="article.html?id={{v.id}}">{{v.title}}</a></h4>
     <p>
     {{v.intro}}
     </p>
@@ -283,6 +283,7 @@
             redian: res.data
         })
         $('.focus_list').html(str)
+
     })
 </script>
 
