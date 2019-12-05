@@ -20,6 +20,20 @@ var article ={
             contentType:false
         })
     },
+    //编辑
+    edit: function (fd,callback) {
+        $.ajax({
+            type:'post',
+            url:urll+'admin/article_edit',
+            data: fd,
+            success:function(res) {
+                callback(res)
+            },
+            processData:false,
+            contentType:false
+        })
+    },
+
 
     //删除文章
     delete: function (id,callback) {

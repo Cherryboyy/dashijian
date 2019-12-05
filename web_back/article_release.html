@@ -27,24 +27,25 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">文章标题：</label>
                     <div class="col-sm-10">
-                        <input type="email" name="title" class="form-control" id="inputEmail3" placeholder="文章标题">
+                        <input type="text" name="title" class="form-control" id="inputEmail3" placeholder="文章标题">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">文章封面：</label>
                     <div class="col-sm-10">
-                        <input name="cover" type="file" id="exampleInputFile">
+                        <img src="" alt="" id="wo">
+                        <input name="cover" src="" type="file" id="exampleInputFile">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">文章类别：</label>
                     <div class="col-sm-4">
-                        <select class="form-control" name="type">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                        <select class="form-control" name="type" id="er">
+<!--                            <option value="1">1</option>-->
+<!--                            <option value="2">2</option>-->
+<!--                            <option value="3">3</option>-->
+<!--                            <option value="4">4</option>-->
+<!--                            <option value="5">5</option>-->
                         </select>
                     </div>
                 </div>
@@ -72,8 +73,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">发布</button>
-                        <button type="submit" class="btn btn-default">存为草稿</button>
+                        <button type="button" class="btn btn-success">发布</button>
+                        <button type="button" class="btn btn-default">存为草稿</button>
                     </div>
                 </div>
             </form>
@@ -112,6 +113,35 @@
 
     </script>
 
+<!--编辑-->
+    <script>
+        var data = location.search.substr(4);
+        console.log(data);
+        article.get({id:data},function(res){
+            console.log(res);
+            $("#inputEmail3").val(res.data.title);
+            $("#wo").attr("src",res.data.cover);
+            $('#er').val(res.data.type);
+            $("#dateinput").val(res.data.date);
+            $("#rich_content").val(res.data.content);
+        });
+        $(".btn-success").click(function () {
+            var data = location.search.substr(4);
+            // console.log(data);
+            var fd = new FormData(document.querySelector("form"));
+            // console.log(document.querySelector("form"));
+            fd.append("id", data)
+            console.dir(fd)
+            article.edit(fd, function (res) {
+                // console.log(res);
+                alert(res.msg);
+                location.href = "article_list.html"
+
+            })
+
+        })
+
+    </script>
 </body>
 
 </html>

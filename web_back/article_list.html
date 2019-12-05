@@ -277,7 +277,8 @@
             <td class="text-center">{{val.date}}</td>
             <td class="text-center">{{val.state}}</td>
             <td class="text-center">
-                <a href="post-edit.html?id=996" class="btn btn-default btn-xs">编辑</a>
+<!--                <a href="post-edit.html?id=996" class="btn btn-default btn-xs">编辑</a>-->
+                <a href="javascript:;" id="{{val.id}}" class="btn btn-default btn-xs">编辑</a>
                 <a href="javascript:;" class="btn btn-danger btn-xs" id="{{val.id}}">删除</a>
             </td>
             </tr>
@@ -331,6 +332,17 @@
                 pp.parents('tr').remove()
             })
         })
+    </script>
+
+    <script>
+        $('tbody').on('click',".btn-default",function() {
+            location.href = 'article_release.html?id='+$(this).attr('id')
+        })
+        // $('tbody').on('click','.btn-default',function () {
+        //     location.href = 'article_release.html'
+        // })
+
+
     </script>
 </body>
 
