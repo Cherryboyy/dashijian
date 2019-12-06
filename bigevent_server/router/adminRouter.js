@@ -37,11 +37,7 @@ router.get('/search', adminController.search);
 router.post('/article_publish', upload.single('cover'), adminController.article_publish);
 router.post('/submit_image', uploadImage.single('file'), function(req, res) {
   console.log(req.file);
-<<<<<<< HEAD
   res.json({ location: require('../utils/config').serverAddress + '/static/img/' + req.file.filename });
-=======
-  res.json({ url: '/static/' + req.file });
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
 });
 // 文章修改
 router.post('/article_edit', upload.single('cover'), adminController.article_edit);

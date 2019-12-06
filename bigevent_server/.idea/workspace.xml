@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="2e7d7a53-9e0f-4d40-8d67-551ee2ad2787" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-=======
-    <list default="true" id="97e4163b-8224-4460-a2f2-28d70586ae7b" name="默认更改列表" comment="" />
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="-1249898867">
       <usages-collector id="statistics.lifecycle.project">
@@ -175,34 +170,6 @@
         <RuleState>
           <option name="name" value="StatusDashboardGroupingRule" />
         </RuleState>
-=======
-  <component name="ProjectId" id="1UP9SR0mtrfEqCYUXEJ8LiudZDU" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../xiangmu" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
       </list>
     </option>
   </component>
@@ -211,7 +178,6 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
       <changelist id="2e7d7a53-9e0f-4d40-8d67-551ee2ad2787" name="Default Changelist" comment="" />
       <created>1575377687415</created>
       <option name="number" value="Default" />
@@ -402,24 +368,5 @@
         </state>
       </provider>
     </entry>
-=======
-      <changelist id="97e4163b-8224-4460-a2f2-28d70586ae7b" name="默认更改列表" comment="" />
-      <created>1575247362694</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1575247362694</updated>
-      <workItem from="1575247365345" duration="1542000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1081" y="293" key="FileChooserDialogImpl" timestamp="1575249432024">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1081" y="293" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1575249432024" />
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
   </component>
 </project>

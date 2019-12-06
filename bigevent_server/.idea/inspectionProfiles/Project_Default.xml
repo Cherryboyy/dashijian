@@ -1,10 +1,6 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-<<<<<<< HEAD
     <inspection_tool class="Eslint" enabled="true" level="ERROR" enabled_by_default="true" />
-=======
-    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
   </profile>
 </component>

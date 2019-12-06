@@ -6,22 +6,17 @@ const router = express.Router()
 const message = require('../utils/message')
 // 导入数据
 const db = require('../utils/db')
-<<<<<<< HEAD
 const path = require('path')
 const article = require(path.join(__dirname, '../utils/article'))
 const category = require(path.join(__dirname, '../utils/category'))
 const config = require(path.join(__dirname, '../utils/config'))
 const moment = require('moment')
 const fs = require('fs')
-=======
-
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
 // 导入控制器
 const categoryController = require('../controllers/category')
 
 // 文章搜索
 router.get('/search', (req, res) => {
-<<<<<<< HEAD
   // 获取提交的数据
   const key = req.query.key || ''
   const type = req.query.type || ''
@@ -195,25 +190,6 @@ router.get('/focus', (req, res) => {
   })
 });
 
-=======
-  // 参数获取
-  const key = req.query.key || ''
-  const type = req.query.type || ''
-  const page = req.query.page || 1
-  const perpage = req.query.perpage || 6
-
-  // 类型判断
-  if (isNaN(page) || isNaN(perpage)) {
-    message.invalidParameter(res)
-    return
-  }
-  // 数据获取
-  const article = db.getArticle()
-
-  // 根据类型检索数据
-})
-
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
 // 评论
 router.post('/post_comment', (req, res) => {
   // 参数获取
@@ -237,10 +213,7 @@ router.post('/post_comment', (req, res) => {
 
 // 获取指定文章编号的评论
 router.get('/get_comments', (req, res) => {
-<<<<<<< HEAD
   // console.log(111)
-=======
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
   // 参数获取
   const article_id = req.query.article_id
 
@@ -259,7 +232,6 @@ router.get('/get_comments', (req, res) => {
   }
 })
 
-<<<<<<< HEAD
 // 最新评论
 router.get('/latest_comment', (req, res) => {
   let comments = db.getComments();
@@ -319,10 +291,6 @@ router.get('/article', (req, res) => {
     data
   });
 });
-=======
-// 分类获取
-router.get('/category', categoryController.category_search)
->>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
 
 // 暴露
 module.exports = router
