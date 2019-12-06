@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_front/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_front/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_front/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_front/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_front/utils/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/web_front/utils/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_front/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web_front/utils/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <workItem from="1575249434706" duration="20403000" />
       <workItem from="1575440332628" duration="23419000" />
       <workItem from="1575506385646" duration="10574000" />
-      <workItem from="1575526946963" duration="3537000" />
+      <workItem from="1575526946963" duration="15647000" />
     </task>
     <task id="LOCAL-00001" summary="添加了一个js地址文件">
       <created>1575270458709</created>

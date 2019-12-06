@@ -6,6 +6,7 @@ var apis = {
     //文章相关接口
     article_hotpic : urll +'/hotpic',
     article_latest:urll +'/latest',
-    article_article:urll +'/article'
+    article_article:urll +'/article',
+    article_search:urll +'/search'
     //评论接口
 }

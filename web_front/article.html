@@ -218,6 +218,8 @@
         article.article(id,function(res) {
             var str = template('at',res.data)
             $('.breadcrumb').after(str)
+
+            $('<script>').attr('src','./prism/prism.js').appendTo('body')
         })
     </script>
 </body>
