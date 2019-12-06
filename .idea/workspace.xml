@@ -13,6 +13,9 @@
       <change beforePath="$PROJECT_DIR$/web_back/article_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/article_category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_back/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/article_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_back/js/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/web_back/js/category.js" afterDir="false" />
+<<<<<<< HEAD
+>>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
+=======
 >>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,9 +76,14 @@
       <updated>1575249433565</updated>
       <workItem from="1575249434706" duration="20403000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1575440332628" duration="23419000" />
       <workItem from="1575506385646" duration="10574000" />
       <workItem from="1575526946963" duration="15647000" />
+=======
+      <workItem from="1575342707373" duration="7914000" />
+      <workItem from="1575377881426" duration="301000" />
+>>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
 =======
       <workItem from="1575342707373" duration="7914000" />
       <workItem from="1575377881426" duration="301000" />

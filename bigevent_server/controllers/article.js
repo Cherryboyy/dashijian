@@ -102,7 +102,10 @@ module.exports = {
       msg: '搜索成功',
       code: 200,
       totalPage,
+<<<<<<< HEAD
       page: page,
+=======
+>>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
       data: backData
     })
   },

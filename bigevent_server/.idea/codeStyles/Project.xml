@@ -1,6 +1,10 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+<<<<<<< HEAD
     <JSCodeStyleSettings>
+=======
+    <JSCodeStyleSettings version="0">
+>>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
       <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false" />
       <option name="FORCE_SEMICOLON_STYLE" value="true" />
       <option name="SPACE_BEFORE_GENERATOR_MULT" value="true" />
@@ -12,6 +16,11 @@
     </JSCodeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+<<<<<<< HEAD
+=======
+      <option name="ALIGN_MULTILINE_PARAMETERS" value="false" />
+      <option name="ALIGN_MULTILINE_FOR" value="false" />
+>>>>>>> 7452ea40f7442cca49fc92a887087772016e6252
       <option name="SPACE_BEFORE_METHOD_PARENTHESES" value="true" />
       <option name="IF_BRACE_FORCE" value="1" />
       <option name="DOWHILE_BRACE_FORCE" value="1" />
