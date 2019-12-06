@@ -7,7 +7,7 @@ var category = {
             type: 'get',
             url: urll + 'admin/category_search',
             success: function (res) {
-                console.log(res);
+                // console.log(res);
                 callback(res)
             }
         })
